@@ -1,0 +1,30 @@
+
+[user]
+        name = Ryan Opel
+        email = ryan.a.opel@gmail.com
+
+[alias]
+        b = for-each-ref --sort=-committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
+        l = log --oneline --decorate -n20
+        co = checkout
+        tree = log --graph --pretty=oneline --abbrev-commit
+
+[color]
+        ui = auto
+
+[core]
+        excludesfile = ~/.gitignore
+        whitespace=trailing-space,tab=in-indent	
+
+[merge]
+        onflictstyle = diff3
+
+[push]
+        default = simple
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
