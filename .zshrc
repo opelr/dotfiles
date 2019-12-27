@@ -1,9 +1,10 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+export PATH=$PATH:/usr/local/go/bin
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/ropel/.oh-my-zsh"
+export ZSH="/home/ryan/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -110,20 +111,7 @@ alias cow="fortune | cowsay -f flaming-sheep -d | lolcat -F 0.15"
 
 # Search Functions
 
-srchexcludes='--exclude-dir=static --exclude-dir=migrations --exclude-dir=static_src --exclude-dir=.git --exclude-dir=bower_componentsm'
-
-function srch() {
-    grep "$1" $MYCB/src -InrE --include="*.py" $srchexcludes --color=always | sort | less -FRS
-}
-
 function findregex(){
   find . -regex $1
 }
-
-# Sources
-
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-
-
 

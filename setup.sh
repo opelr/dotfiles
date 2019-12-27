@@ -12,7 +12,7 @@ sudo snap install --classic code
 python3 -m pip install pipenv black flake8 mypy
 
 # Configure zsh
-sh zsh/zsh_setup.sh
+sh ./zsh/zsh_setup.sh
 
 # Link dotfiles (.tmux, .vim, .zshrc, etc.)
 ln -s $(pwd)/.gitconfig ~
