@@ -1,0 +1,7 @@
+export PATH="$HOME/.poetry/bin:$PATH"
+export PATH="$HOME/git/cloudbolt/cloudbolt/appliances/docker-compose/scripts/product:$PATH"
+
+eval "$(pyenv init -)"
+
+export MYSQL_PASSWORD=mY_paSs
+export MYSQL_ROOT_PASSWORD=mY_r00t_paSs

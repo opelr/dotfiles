@@ -1,6 +1,0 @@
-vim
-tmux
-git
-fonts-firacode
-python3-pip
-zsh
