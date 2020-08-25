@@ -16,6 +16,7 @@ apps=(
     tunnelblick
     visual-studio-code
     vlc
+    zoom
 )
 
 brew cask install "${apps[@]}"
