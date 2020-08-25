@@ -25,10 +25,12 @@ defaults write com.apple.sound.beep.feedback -bool false
 # Menu bar: show battery percentage
 defaults write com.apple.menuextra.battery -bool true
 
-# Disable smart quotes, they're annoying when typing code
-defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+# Menu bar: set datetime format
+defaults write com.apple.menuextra.clock IsAnalog -bool false
+defaults write com.apple.menuextra.clock DateFormat -string "EEE d MMM h:mm:ss a"
 
-# Disable smart dashes, they're annoying when typing code
+# Disable smart quotes and dashes, they're annoying when typing code
+defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 
 ###############################################################################
