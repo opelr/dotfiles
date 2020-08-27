@@ -2,6 +2,7 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 export PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
+export PATH="$PATH:$(go env GOPATH)/bin"
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/ropel/.oh-my-zsh"

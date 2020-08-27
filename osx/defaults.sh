@@ -29,9 +29,10 @@ defaults write com.apple.menuextra.battery -bool true
 defaults write com.apple.menuextra.clock IsAnalog -bool false
 defaults write com.apple.menuextra.clock DateFormat -string "EEE d MMM h:mm:ss a"
 
-# Disable smart quotes and dashes, they're annoying when typing code
+# Disable smart quotes, dashes, and automatic period insertion.
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
 
 ###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
