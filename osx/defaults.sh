@@ -54,6 +54,9 @@ sudo chmod 444 /private/var/db/.AccessibilityAPIEnabled
 # Disable auto-correct
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
+# Set touch bar to control strip mode (e.g. no smart "app" buttons)
+ defaults write com.apple.touchbar.agent PresentationModeGlobal fullControlStrip
+
 ###############################################################################
 # Screen                                                                      #
 ###############################################################################
@@ -226,6 +229,6 @@ defaults write com.apple.appstore ShowDebugMenu -bool true
 # Kill affected applications                                                  #
 ###############################################################################
 
-for app in "Address Book" "Calendar" "Contacts" "Dock" "Finder" "Mail" "Safari" "SystemUIServer" "iCal"; do
+for app in "Address Book" "Calendar" "Contacts" "Dock" "Finder" "Mail" "Safari" "SystemUIServer" "iCal" "ControlStrip"; do
     killall "${app}" &> /dev/null
 done
