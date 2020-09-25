@@ -14,6 +14,7 @@ apps=(
     git
     go
     htop
+    jq
     kubernetes-cli
     minikube
     node
