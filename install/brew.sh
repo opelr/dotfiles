@@ -12,6 +12,7 @@ apps=(
     dockutil
     elixir
     git
+    gh
     go
     htop
     jq
