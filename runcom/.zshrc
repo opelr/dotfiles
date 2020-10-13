@@ -126,3 +126,5 @@ function pp() {
   poetry run pytest $@
 }
 
+export EDITOR=vim
+
