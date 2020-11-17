@@ -5,3 +5,6 @@ eval "$(pyenv init -)"
 
 export MYSQL_PASSWORD=mY_paSs
 export MYSQL_ROOT_PASSWORD=mY_r00t_paSs
+
+export CIT="10.55.63.163"
+
