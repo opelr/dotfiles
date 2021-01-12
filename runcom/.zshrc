@@ -68,6 +68,8 @@ ZSH_THEME="spaceship"
 plugins=(
   docker-compose
   git
+  kubectl
+  kube-ps1
   tmux
   zsh-autosuggestions
   zsh-syntax-highlighting
@@ -121,10 +123,6 @@ function findregex(){
 }
 
 function gi() { curl -sLw n https://www.gitignore.io/api/$@ ;}
-
-function pp() {
-  poetry run pytest $@
-}
 
 export EDITOR=vim
 

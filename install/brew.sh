@@ -16,6 +16,7 @@ apps=(
     go
     htop
     jq
+    kubectx
     kubernetes-cli
     minikube
     node
@@ -28,6 +29,7 @@ apps=(
     tree
     vim
     wget
+    yq
     zsh
     zsh-syntax-highlighting
 )

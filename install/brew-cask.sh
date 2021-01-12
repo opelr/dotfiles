@@ -9,9 +9,9 @@ apps=(
     font-fira-code
     iterm2
     keepingyouawake
-    magnet
     postman
     slack
+    rectangle
     spotify
     tunnelblick
     visual-studio-code

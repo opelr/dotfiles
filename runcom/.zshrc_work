@@ -1,10 +1,14 @@
-export PATH="$HOME/.poetry/bin:$PATH"
-export PATH="$HOME/git/cloudbolt/cloudbolt/appliances/docker-compose/scripts/product:$PATH"
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
 
-eval "$(pyenv init -)"
+eval "$(rbenv init -)"
 
-export MYSQL_PASSWORD=mY_paSs
-export MYSQL_ROOT_PASSWORD=mY_r00t_paSs
+alias chi="lpass show --password 'datanerd.us (PAM)' -q | tr -d '\n' | pbcopy"
+alias pdx="lpass show --password 'okta.com' -q | tr -d '\n' | pbcopy"
 
-export CIT="10.55.63.163"
-
+# goenv
+export GOENV_ROOT="$HOME/.goenv"
+export PATH="$GOENV_ROOT/bin:$PATH"
+eval "$(goenv init -)"
+export PATH="$GOROOT/bin:$PATH"
+export PATH="$PATH:$GOPATH/bin"
