@@ -12,3 +12,7 @@ export PATH="$GOENV_ROOT/bin:$PATH"
 eval "$(goenv init -)"
 export PATH="$GOROOT/bin:$PATH"
 export PATH="$PATH:$GOPATH/bin"
+
+# Kubebuilder
+export PATH=$PATH:/usr/local/kubebuilder/bin
+
