@@ -32,3 +32,7 @@
 
 [pull]
 	rebase = true
+
+[url "ssh://git@source.datanerd.us/"]
+    insteadOf = https://source.datanerd.us/
+

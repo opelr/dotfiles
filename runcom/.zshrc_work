@@ -1,18 +1,29 @@
+# Java
 export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)"
+_evalcache jenv init -
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 
-eval "$(rbenv init -)"
+# Ruby
+_evalcache rbenv init -
 
-alias chi="lpass show --password 'datanerd.us (PAM)' -q | tr -d '\n' | pbcopy"
-alias pdx="lpass show --password 'okta.com' -q | tr -d '\n' | pbcopy"
+# Python
+_evalcache pyenv init -
+export PATH="$HOME/.poetry/bin:$PATH"
 
 # goenv
+export PATH="$PATH:$(go env GOPATH)/bin"
 export GOENV_ROOT="$HOME/.goenv"
 export PATH="$GOENV_ROOT/bin:$PATH"
-eval "$(goenv init -)"
+_evalcache goenv init -
 export PATH="$GOROOT/bin:$PATH"
 export PATH="$PATH:$GOPATH/bin"
 
 # Kubebuilder
-export PATH=$PATH:/usr/local/kubebuilder/bin
+export PATH="$PATH:/usr/local/kubebuilder/bin"
 
+# yq
+export PATH="/usr/local/opt/yq@3/bin:$PATH"
+
+# Aliases
+alias chi="lpass show --password 'datanerd.us (PAM)' -q | tr -d '\n' | pbcopy"
+alias pdx="lpass show --password 'okta.com' -q | tr -d '\n' | pbcopy"
