@@ -7,27 +7,36 @@ brew upgrade
 # Install packages
 
 apps=(
+    argo
+    argocd
     cmake
     coreutils
     dockutil
-    elixir
     git
     gh
     go
+    helmfile
+    hugo
     htop
     jq
+    kind
     kubectx
     kubernetes-cli
+    lastpass-cli
     minikube
     node
+    opa
     packer
     pandoc
     python
     pyenv
-    terraform
+    rbenv
+    redis
+    tfenv
     tmux
     tree
     vim
+    watch
     wget
     yq
     zsh
