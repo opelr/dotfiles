@@ -33,9 +33,7 @@ source $HOME/.zshrc_work
 # Aliases
 alias bn="git rev-parse --abbrev-ref HEAD"
 alias cow="fortune | cowsay -f flaming-sheep -d | lolcat -F 0.15"
-
-alias chi="lpass show --password 'datanerd.us (PAM)' -q | tr -d '\n' | pbcopy"
-alias pdx="lpass show --password 'okta.com' -q | tr -d '\n' | pbcopy"
+alias watch="watch -c "
 
 # Functions
 function findregex(){

@@ -9,7 +9,6 @@ apps=(
     font-fira-code
     iterm2
     keepingyouawake
-    postman
     slack
     rectangle
     spotify

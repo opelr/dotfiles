@@ -1,7 +1,7 @@
 # Java
-export PATH="$HOME/.jenv/bin:$PATH"
 _evalcache jenv init -
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+export PATH="$HOME/.jenv/bin:$PATH"
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.11)
 
 # Ruby
 _evalcache rbenv init -
@@ -24,6 +24,4 @@ export PATH="$PATH:/usr/local/kubebuilder/bin"
 # yq
 export PATH="/usr/local/opt/yq@3/bin:$PATH"
 
-# Aliases
-alias chi="lpass show --password 'datanerd.us (PAM)' -q | tr -d '\n' | pbcopy"
-alias pdx="lpass show --password 'okta.com' -q | tr -d '\n' | pbcopy"
+source $HOME/.zshrc_credentials

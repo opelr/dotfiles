@@ -1,7 +1,7 @@
 
 [user]
     name = Ryan Opel
-    email = ropel@newrelic.com 
+    email = ropel@newrelic.com
 
 [alias]
     b = for-each-ref --sort=-committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
@@ -35,4 +35,3 @@
 
 [url "ssh://git@source.datanerd.us/"]
     insteadOf = https://source.datanerd.us/
-
