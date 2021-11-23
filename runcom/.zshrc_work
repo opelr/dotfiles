@@ -24,4 +24,8 @@ export PATH="$PATH:/usr/local/kubebuilder/bin"
 # yq
 export PATH="/usr/local/opt/yq@3/bin:$PATH"
 
+# .core
+source /Users/ropel/git/newrelic/dirac/dirac-tools/dirac-core/core_funcs.sh
+
 source $HOME/.zshrc_credentials
+

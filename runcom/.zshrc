@@ -1,3 +1,5 @@
+zmodload zsh/zprof
+
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
@@ -5,7 +7,7 @@ export PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/ropel/.oh-my-zsh"
-export EDITOR=vim
+export EDITOR=nvim
 
 # Theme
 ZSH_THEME="spaceship"
@@ -15,14 +17,13 @@ SPACESHIP_KUBECTL_VERSION_SHOW=false
 
 # ZSH plugins
 plugins=(
-  docker-compose
+  autojump
   evalcache
   git
   kubectl
   kube-ps1
   tmux
   zsh-autosuggestions
-  zsh-nvm
   zsh-syntax-highlighting
 )
 
@@ -34,10 +35,12 @@ source $HOME/.zshrc_work
 alias bn="git rev-parse --abbrev-ref HEAD"
 alias cow="fortune | cowsay -f flaming-sheep -d | lolcat -F 0.15"
 alias watch="watch -c "
+alias vim="nvim"
 
 # Functions
 function findregex(){
   find . -regex $1
 }
 
-function gi() { curl -sLw n https://www.gitignore.io/api/$@ ;}
+function gi() { curl -sLwn https://www.gitignore.io/api/$@ ;}
+

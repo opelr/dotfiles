@@ -9,6 +9,7 @@ brew upgrade
 apps=(
     argo
     argocd
+    autojump
     cmake
     coreutils
     dockutil
@@ -24,7 +25,7 @@ apps=(
     kubernetes-cli
     lastpass-cli
     minikube
-    node
+    neovim
     opa
     packer
     pandoc
@@ -35,7 +36,6 @@ apps=(
     tfenv
     tmux
     tree
-    vim
     watch
     wget
     yq
