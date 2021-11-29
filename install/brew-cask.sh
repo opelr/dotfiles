@@ -3,6 +3,7 @@
 brew tap homebrew/cask-fonts
 
 apps=(
+    alacritty
     basictex
     discord
     docker

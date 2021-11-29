@@ -33,6 +33,7 @@ apps=(
     pyenv
     rbenv
     redis
+    starship
     tfenv
     tmux
     tree

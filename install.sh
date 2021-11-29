@@ -14,16 +14,23 @@ export DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 . "$DOTFILES_DIR/install/brew.sh"
 . "$DOTFILES_DIR/install/brew-cask.sh"
-. "$DOTFILES_DIR/install/zsh.sh"
 
 # Bunch of symlinks
 
 ln -sfv "$DOTFILES_DIR/runcom/.vimrc" ~
-ln -sfv "$DOTFILES_DIR/runcom/.zshrc_work" ~ # Must come before zshrc
 ln -sfv "$DOTFILES_DIR/runcom/.zshrc" ~
+ln -sfv "$DOTFILES_DIR/runcom/.zshrc_work" ~
 ln -sfv "$DOTFILES_DIR/runcom/.tmux.conf" ~
+ln -sfv "$DOTFILES_DIR/runcom/.alacritty.yml" ~
 ln -sfv "$DOTFILES_DIR/git/.gitconfig" ~
 ln -sfv "$DOTFILES_DIR/git/.gitignore" ~
+
+mkdir -p ~/.config
+ln -sfv "$DOTFILES_DIR/runcom/starship.toml" ~/.config
+
+mkdir -p ~/antigen
+curl -L git.io/antigen > ~/antigen/antigen.zsh
+ln -sfv "$DOTFILES_DIR/runcom/.antigenrc" ~
 
 # OS X
 
