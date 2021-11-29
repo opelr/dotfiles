@@ -14,6 +14,7 @@ export DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 . "$DOTFILES_DIR/install/brew.sh"
 . "$DOTFILES_DIR/install/brew-cask.sh"
+. "$DOTFILES_DIR/install/zsh.sh"
 
 # Bunch of symlinks
 
@@ -27,10 +28,6 @@ ln -sfv "$DOTFILES_DIR/git/.gitignore" ~
 
 mkdir -p ~/.config
 ln -sfv "$DOTFILES_DIR/runcom/starship.toml" ~/.config
-
-mkdir -p ~/antigen
-curl -L git.io/antigen > ~/antigen/antigen.zsh
-ln -sfv "$DOTFILES_DIR/runcom/.antigenrc" ~
 
 # OS X
 

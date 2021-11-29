@@ -1,25 +1,15 @@
 # Java
-_evalcache jenv init -
 export PATH="$HOME/.jenv/bin:$PATH"
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.11)
 
-# Ruby
-_evalcache rbenv init -
-
 # Python
-_evalcache pyenv init -
 export PATH="$HOME/.poetry/bin:$PATH"
 
 # goenv
-export PATH="$PATH:$(go env GOPATH)/bin"
-export GOENV_ROOT="$HOME/.goenv"
-export PATH="$GOENV_ROOT/bin:$PATH"
-_evalcache goenv init -
-export PATH="$GOROOT/bin:$PATH"
-export PATH="$PATH:$GOPATH/bin"
+export PATH="$GOPATH/bin:$PATH"
 
 # Kubebuilder
-export PATH="$PATH:/usr/local/kubebuilder/bin"
+export PATH="/usr/local/kubebuilder/bin:$PATH"
 
 # yq
 export PATH="/usr/local/opt/yq@3/bin:$PATH"
@@ -28,4 +18,3 @@ export PATH="/usr/local/opt/yq@3/bin:$PATH"
 source /Users/ropel/git/newrelic/dirac/dirac-tools/dirac-core/core_funcs.sh
 
 source $HOME/.zshrc_credentials
-

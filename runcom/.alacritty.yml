@@ -42,7 +42,7 @@ colors:
 
 window:
   padding:
-    x: 0
+    x: 10
     y: 0
   dynamic_padding: true
   decorations: transparent
@@ -52,9 +52,10 @@ shell:
   args:
     - -l
     - -c
-    - "tmux aal"
+    - "tmux new-session -A -s main -c ~/git/newrelic"
 
 key_bindings:
   - { key: A, mods: Control, chars: "\x1bOH"}
   - { key: E, mods: Control, chars: "\x1bOF"}
-  - { key: W, mods: Alt, chars: "\x1b\x77"}
+  - { key: B, mods: Alt, chars: "\x1b\x62"}
+  - { key: F, mods: Alt, chars: "\x1b\x66"}

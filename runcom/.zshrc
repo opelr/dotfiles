@@ -1,26 +1,32 @@
 zmodload zsh/zprof
 
-eval "$(starship init zsh)"
-
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH="/usr/local/opt/python/libexec/bin:$PATH"
-export PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
+export ZSH="/Users/ropel/.oh-my-zsh"
+export PATH="$HOME/bin:/usr/local/bin:/usr/local/opt/python/libexec/bin:/usr/local/opt/make/libexec/gnubin:$PATH"
 export EDITOR=nvim
 
-source $HOME/.antigenrc
-source $HOME/.zshrc_work
+plugins=(
+  asdf
+  autojump
+  aws
+  git
+  kubectl
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+)
 
 # Aliases
-alias k="kubectl"
 alias bn="git rev-parse --abbrev-ref HEAD"
 alias cow="fortune | cowsay -f flaming-sheep -d | lolcat -F 0.15"
 alias watch="watch -c "
 alias vim="nvim"
+alias idea='open -na "IntelliJ IDEA CE.app"'
 
-# Kubernetes autocomplete
-autoload -Uz compinit && compinit
-source <(kubectl completion zsh)
-compdef __start_kubectl k
+# Theme
+eval "$(starship init zsh)"
+
+# Dependent Sources
+source $ZSH/oh-my-zsh.sh
+source $HOME/.zshrc_work
 
 # Functions
 function findregex(){
@@ -28,4 +34,3 @@ function findregex(){
 }
 
 function gi() { curl -sLwn https://www.gitignore.io/api/$@ ;}
-
