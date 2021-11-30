@@ -28,6 +28,12 @@ eval "$(starship init zsh)"
 source $ZSH/oh-my-zsh.sh
 source $HOME/.zshrc_work
 
+# Python
+export PATH="$HOME/.poetry/bin:$PATH"
+
+# Go
+export PATH="$(go env GOPATH)/bin:$PATH"
+
 # Functions
 function findregex(){
   find . -regex $1
