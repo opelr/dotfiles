@@ -1,9 +1,8 @@
+export GOPRIVATE="source.datanerd.us/*"
+
 # Java
 export PATH="$HOME/.jenv/bin:$PATH"
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.11)
-
-# Kubebuilder
-export PATH="/usr/local/kubebuilder/bin:$PATH"
 
 # yq
 export PATH="/usr/local/opt/yq@3/bin:$PATH"

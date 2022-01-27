@@ -1,5 +1,3 @@
-zmodload zsh/zprof
-
 export ZSH="/Users/ropel/.oh-my-zsh"
 export PATH="$HOME/bin:/usr/local/bin:/usr/local/opt/python/libexec/bin:/usr/local/opt/make/libexec/gnubin:$PATH"
 export EDITOR=nvim
@@ -10,13 +8,13 @@ plugins=(
   aws
   git
   kubectl
+  terraform
   zsh-autosuggestions
   zsh-syntax-highlighting
 )
 
 # Aliases
 alias bn="git rev-parse --abbrev-ref HEAD"
-alias cow="fortune | cowsay -f flaming-sheep -d | lolcat -F 0.15"
 alias watch="watch -c "
 alias vim="nvim"
 alias idea='open -na "IntelliJ IDEA CE.app"'
@@ -40,3 +38,4 @@ function findregex(){
 }
 
 function gi() { curl -sLwn https://www.gitignore.io/api/$@ ;}
+

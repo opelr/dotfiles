@@ -16,7 +16,7 @@
 [core]
 	excludesfile = /Users/ropel/.gitignore
     whitespace=trailing-space,tab=in-indent	
-	editor = vim
+	editor = nvim
 
 [merge]
     onflictstyle = diff3
