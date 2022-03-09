@@ -10,12 +10,11 @@ apps=(
     firefox
     font-fira-code
     font-iosevka
-    iterm2
+    insomnia
     keepingyouawake
     slack
     rectangle
     spotify
-    tunnelblick
     visual-studio-code
     vlc
     zoom

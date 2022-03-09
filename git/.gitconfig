@@ -35,3 +35,5 @@
 
 [url "ssh://git@source.datanerd.us/"]
     insteadOf = https://source.datanerd.us/
+[init]
+	defaultBranch = master
