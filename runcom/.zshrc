@@ -1,5 +1,5 @@
 export ZSH="/Users/ropel/.oh-my-zsh"
-export PATH="$HOME/bin:/usr/local/bin:/usr/local/opt/python/libexec/bin:/usr/local/opt/make/libexec/gnubin:$PATH"
+export PATH="$HOME/bin:/usr/local/bin:/usr/local/opt/python/libexec/bin:/usr/local/opt/make/libexec/gnubin:/usr/local/texlive/2021basic/bin/universal-darwin/:$PATH"
 export EDITOR=nvim
 
 plugins=(
@@ -8,7 +8,6 @@ plugins=(
   aws
   git
   kubectl
-  terraform
   zsh-autosuggestions
   zsh-syntax-highlighting
 )

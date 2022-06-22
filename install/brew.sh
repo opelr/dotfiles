@@ -21,6 +21,7 @@ apps=(
     htop
     jq
     kind
+    kotlin
     kubectx
     kubernetes-cli
     lastpass-cli

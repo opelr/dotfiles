@@ -22,7 +22,7 @@ $jobs\
 $status\
 $shell\
 $character"""
-command_timeout = 1000
+command_timeout = 2500
 
 [git_branch]
 format = "| [$symbol$branch]($style) "

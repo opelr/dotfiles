@@ -9,7 +9,6 @@ apps=(
     docker
     firefox
     font-fira-code
-    font-iosevka
     insomnia
     keepingyouawake
     slack
