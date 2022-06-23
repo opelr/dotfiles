@@ -15,32 +15,23 @@ apps=(
     dockutil
     git
     gh
-    go
-    helmfile
+    helm
     hugo
     htop
     jq
-    kind
     kotlin
     kubectx
     kubernetes-cli
     lastpass-cli
-    minikube
     neovim
     opa
-    packer
     pandoc
-    python
-    pyenv
-    rbenv
     redis
     starship
-    tfenv
     tmux
     tree
     watch
     wget
-    yq
     zsh
     zsh-syntax-highlighting
 )

@@ -11,8 +11,8 @@ apps=(
     font-fira-code
     insomnia
     keepingyouawake
-    slack
     rectangle
+    slack
     spotify
     visual-studio-code
     vlc
