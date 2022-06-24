@@ -1,5 +1,5 @@
 export ZSH="/Users/ropel/.oh-my-zsh"
-export PATH="$HOME/bin:/usr/local/bin:/usr/local/opt/python/libexec/bin:/usr/local/opt/make/libexec/gnubin:/usr/local/texlive/2021basic/bin/universal-darwin/:$PATH"
+export PATH="/opt/homebrew/bin:$HOME/bin:/usr/local/bin:/usr/local/opt/python/libexec/bin:/usr/local/opt/make/libexec/gnubin:/usr/local/texlive/2021basic/bin/universal-darwin/:$PATH"
 export EDITOR=nvim
 
 plugins=(
