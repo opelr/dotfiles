@@ -132,6 +132,9 @@ defaults write com.apple.dock showhidden -bool true
 # No bouncing icons
 # defaults write com.apple.dock no-bouncing -bool true
 
+# No recent apps
+defaults write com.apple.dock show-recents -bool false
+
 ###############################################################################
 # Dashboard                                                                   #
 ###############################################################################

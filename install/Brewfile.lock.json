@@ -949,6 +949,12 @@
         "options": {
           "full_name": "vlc"
         }
+      },
+      "karabiner-elements": {
+        "version": "14.4.0",
+        "options": {
+          "full_name": "karabiner-elements"
+        }
       }
     }
   },
@@ -957,7 +963,7 @@
       "monterey": {
         "HOMEBREW_VERSION": "3.5.2",
         "HOMEBREW_PREFIX": "/opt/homebrew",
-        "Homebrew/homebrew-core": "abecc0c04d18add4bfb9b016be00ac53acb97c1b",
+        "Homebrew/homebrew-core": "2e3d51340f2f9b47d680f656e712fbee77cbcf79",
         "CLT": "13.0.0.0.1.1627064638",
         "Xcode": "13.2.1",
         "macOS": "12.2.1"
