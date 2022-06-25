@@ -45,12 +45,12 @@ window:
   dynamic_padding: true
   decorations: transparent
 
-shell:
-  program: /bin/zsh
-  args:
-    - -l
-    - -c
-    - "tmux new-session -A -s main -c ~/git/newrelic"
+# shell:
+#   program: /bin/zsh
+#   args:
+#     - -l
+#     - -c
+#     - tmux new-session -A -s main -c ~/git/newrelic
 
 key_bindings:
   - { key: A, mods: Control, chars: "\x1bOH" }

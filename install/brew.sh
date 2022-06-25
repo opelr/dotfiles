@@ -1,9 +1,14 @@
 # Install Homebrew
 
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+if ! command -v brew &> /dev/null
+then
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
+
 brew update
 brew upgrade
 
 export PATH="/opt/homebrew/bin:$PATH"
 
-brew bundle
+export PWD="$(dirname "$(realpath "$0")")"
+brew bundle --file "$PWD/Brewfile"

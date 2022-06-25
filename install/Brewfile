@@ -25,6 +25,7 @@ brew 'zsh-syntax-highlighting'
 
 tap 'homebrew/cask-fonts'
 
+cask 'alacritty'
 cask 'basictex'
 cask 'docker'
 cask 'firefox'
