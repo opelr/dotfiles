@@ -10,6 +10,4 @@ export PATH="/usr/local/kubebuilder/bin:$PATH"
 # .core
 source /Users/ropel/git/newrelic/dirac/dirac-tools/dirac-core/core_funcs.sh
 
-alias start_tmux="tmux new-session -A -s main -c ~/git/newrelic"
-
 source $HOME/.zshrc_credentials

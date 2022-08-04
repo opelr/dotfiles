@@ -29,6 +29,9 @@ ln -sfv "$DOTFILES_DIR/git/.gitignore" ~
 mkdir -p ~/.config
 ln -sfv "$DOTFILES_DIR/runcom/starship.toml" ~/.config
 
+mkdir -p ~/.config/nvim/
+ln -sfv "$DOTFILES_DIR/runcom/init.vim" ~/.config/nvim/init.vim
+
 mkdir -p ~/.config/karabiner
 ln -sfv "$DOTFILES_DIR/karabiner/karabiner.json" ~/.config/karabiner
 
