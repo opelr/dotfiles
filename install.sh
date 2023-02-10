@@ -15,6 +15,9 @@ export DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 . "$DOTFILES_DIR/install/brew.sh"
 . "$DOTFILES_DIR/install/zsh.sh"
 
+# Rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
 # Bunch of symlinks
 
 ln -sfv "$DOTFILES_DIR/runcom/.vimrc" ~

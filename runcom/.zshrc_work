@@ -1,13 +1,12 @@
 export GOPRIVATE="source.datanerd.us/*"
 
-# Java
-export PATH="$HOME/.jenv/bin:$PATH"
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.11)
-
 # Kubebuilder
 export PATH="/usr/local/kubebuilder/bin:$PATH"
 
 # .core
 source /Users/ropel/git/newrelic/dirac/dirac-tools/dirac-core/core_funcs.sh
+
+# Java
+. ~/.asdf/plugins/java/set-java-home.zsh
 
 source $HOME/.zshrc_credentials
