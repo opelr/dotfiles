@@ -1,4 +1,3 @@
-
 brew 'argo'
 brew 'argocd'
 brew 'cmake'
@@ -7,6 +6,7 @@ brew 'dockutil'
 brew 'fzf'
 brew 'git'
 brew 'gh'
+brew 'helix'
 brew 'helm'
 brew 'hugo'
 brew 'htop'
@@ -38,4 +38,3 @@ cask 'rectangle'
 cask 'spotify'
 cask 'visual-studio-code'
 cask 'vlc'
-

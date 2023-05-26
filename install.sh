@@ -33,10 +33,13 @@ mkdir -p ~/.config
 ln -sfv "$DOTFILES_DIR/runcom/starship.toml" ~/.config
 
 mkdir -p ~/.config/nvim/
-ln -sfv "$DOTFILES_DIR/runcom/init.vim" ~/.config/nvim/init.vim
+ln -sfv "$DOTFILES_DIR/runcom/nvim/init.vim" ~/.config/nvim/init.vim
 
 mkdir -p ~/.config/karabiner
 ln -sfv "$DOTFILES_DIR/karabiner/karabiner.json" ~/.config/karabiner
+
+mkdir -p ~/.config/helix
+ln -sfv "$DOTFILES_DIR/runcom/helix/config.toml" ~/.config/helix
 
 # OS X
 
