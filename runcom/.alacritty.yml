@@ -45,11 +45,16 @@ window:
   decorations: buttonless
 
 shell:
-  program: /bin/zsh
+  program: /opt/homebrew/bin/tmux
   args:
-    - -l
-    - -c
-    - /opt/homebrew/bin/tmux new-session -A -s main -c ~/git/newrelic
+    - new-session
+    - -A
+    - -D
+    - -s
+    - main
+
+# debug:
+#   persistent_logging: false
 
 key_bindings:
   - { key: A, mods: Control, chars: "\x1bOH" }
