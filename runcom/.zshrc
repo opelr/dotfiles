@@ -5,6 +5,11 @@ export PATH="/opt/homebrew/bin:$HOME/.local/bin:$HOME/bin:/usr/local/bin:/usr/lo
 export EDITOR=nvim
 autoload -Uz compinit && compinit
 
+bindkey "^[b" backward-word
+bindkey "^[f" forward-word
+bindkey "^W" vi-backward-kill-word
+bindkey "^Q" backward-kill-word  # TODO: Don't work
+
 # jump!
 eval "$(jump shell)"
 
@@ -45,11 +50,23 @@ export GOROOT="$(go env GOROOT)"
 fpath=(${ASDF_DIR}/completions $fpath)
 
 # History, fzf
-export HISTFILESIZE=10000
-export HISTSIZE=10000
 export HISTFILE=~/.zsh_history
+export HISTSIZE=10000000
+export SAVEHIST=$HISTSIZE
 setopt INC_APPEND_HISTORY
 setopt HIST_FIND_NO_DUPS
+setopt HIST_IGNORE_DUPS
+setopt HIST_REDUCE_BLANKS
+setopt SHARE_HISTORY
+
+autoload -U up-line-or-beginning-search
+zle -N up-line-or-beginning-search
+bindkey "^[[A" up-line-or-beginning-search
+
+autoload -U down-line-or-beginning-search
+zle -N down-line-or-beginning-search
+bindkey "^[[B" down-line-or-beginning-search
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Theming
