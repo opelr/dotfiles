@@ -1,10 +1,18 @@
 #!/bin/zsh
 
 # zmodload zsh/zprof
-export PATH="/opt/homebrew/bin:$HOME/.local/bin:$HOME/bin:/usr/local/bin:/usr/local/opt/python/libexec/bin:/usr/local/opt/make/libexec/gnubin:/usr/local/texlive/2021basic/bin/universal-darwin/:$HOME/.cargo/bin:$PATH"
-export EDITOR=nvim
-autoload -Uz compinit && compinit
 
+export PATH="/opt/homebrew/bin:$HOME/.local/bin:$HOME/bin:/usr/local/bin:/usr/local/opt/python/libexec/bin:/usr/local/opt/make/libexec/gnubin:$HOME/.cargo/bin:$PATH"
+export EDITOR=hx
+
+# Only generation completions once per day, otherwise use the cache
+autoload -Uz compinit
+for dump in ~/.zcompdump(N.mh+24); do
+  compinit
+done
+compinit -C
+
+# Emacs-style movement
 bindkey "^[b" backward-word
 bindkey "^[f" forward-word
 bindkey "^W" vi-backward-kill-word
@@ -16,10 +24,23 @@ eval "$(jump shell)"
 # Aliases
 alias k="kubectl"
 alias dc="docker-compose"
+alias dcupbf="docker-compose up -d --build --force-recreate"
 alias bn="git rev-parse --abbrev-ref HEAD"
 alias watch="watch -c "
 alias vim="nvim"
 alias now="date -u +'%Y-%m-%dT%H:%M:%S'"
+
+parse_unix() {
+  gdate -ud @$1 '+%Y-%m-%d %H:%M:%S'
+}
+
+parse_unix_millis() {
+  gdate -ud @$(($1 / 1000)) '+%Y-%m-%d %H:%M:%S'
+}
+
+to_unix_millis() {
+    gdate -ud $1 +%s%3N
+}
 
 ## Directories
 setopt auto_cd
@@ -41,13 +62,13 @@ source $HOME/.zshrc_work
 # kubectl
 source <(kubectl completion zsh)
 
-# Go
-export PATH="$(go env GOPATH)/bin:$PATH"
-export GOROOT="$(go env GOROOT)"
+# mise
+eval "$(mise activate zsh)"
 
-# asdf
-. "$HOME/.asdf/asdf.sh"
-fpath=(${ASDF_DIR}/completions $fpath)
+# Go
+export GOPATH="$(go env GOROOT)/packages"
+export GOMODCACHE="$(go env GOROOT)/packages/pkg/mod"
+export PATH="$PATH:$(go env GOPATH)/bin"
 
 # History, fzf
 export HISTFILE=~/.zsh_history
@@ -73,5 +94,12 @@ bindkey "^[[B" down-line-or-beginning-search
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 eval "$(starship init zsh)"
+
+export PATH="/opt/homebrew/opt/mysql@8.0/bin:$PATH"
+
+timezsh() {
+  shell=${1-$SHELL}
+  for i in $(seq 1 4); do /usr/bin/time $shell -i -c exit; done
+}
 
 # zprof

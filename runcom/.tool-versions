@@ -1,6 +1,6 @@
-golang 1.21.4
+golang 1.24.2
 python 3.11.6
-terraform 1.5.0
+terraform 1.8.0
 aws-vault 6.3.1
 nodejs 16.11.1
-java corretto-17.0.7.7.1
+java corretto-17.0.12.7.1

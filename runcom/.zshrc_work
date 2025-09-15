@@ -3,17 +3,33 @@
 export GOPRIVATE="source.datanerd.us/*"
 
 # Kubebuilder
-export PATH="/usr/local/kubebuilder/bin:$PATH"
+export PATH="$PATH:/usr/local/kubebuilder/bin"
 
 # .core
 source /Users/ropel/git/newrelic/dirac/dirac-tools/dirac-core/core_funcs.sh
 
 accountinfo () {
- curl "https://root-account-info-emitter.vip.cf.nr-ops.net/v1/account/?id=$1" | jq --sort-keys .
+  curl "https://staging-root-account-info-emitter.vip.cf.nr-ops.net/account/v2/tree?id=$1" | jq --sort-keys .
 }
 
-# Java
-. ~/.asdf/plugins/java/set-java-home.zsh
+export NOTES_DIR="/Users/ropel/git/newrelic/ropel/notes"
+
+note () {
+    today=$(date +'%Y-%m-%d')
+    filename="$today-$(echo $1 | sed 's/[ _]/-/g').md"
+    filepath="$NOTES_DIR/$filename"
+
+    if ! [ -f  "$filepath" ]; then
+        title=$(echo $1 | sed 's/-/ /g' | awk '{for(j=1;j<=NF;j++){ $j=toupper(substr($j,1,1)) substr($j,2) }}1')
+        echo "# $title\n\n> Date: $today\n" > "$filepath"
+    fi
+
+    code "$NOTES_DIR" -g "$filepath"
+}
+
+notes() {
+    code "$NOTES_DIR" &
+}
 
 if [ -f "$HOME/.zshrc_credentials" ]; then
     source "$HOME/.zshrc_credentials"

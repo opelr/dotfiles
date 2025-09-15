@@ -40,5 +40,10 @@ Thumbs.db
 package-lock.json
 
 # IDE Configuration #
-# ###################
+#####################
 .idea/*
+
+# Monitoring #
+##############
+*.marker_files.txt
+

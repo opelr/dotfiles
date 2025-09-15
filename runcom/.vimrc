@@ -32,6 +32,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable line numbering
 set number
+set relativenumber
 
 " Sets how many lines of history VIM has to remember
 set history=500
@@ -143,7 +144,7 @@ if $COLORTERM == 'gnome-terminal'
 endif
 
 try
-    colorscheme desert
+    colorscheme monokai_pro
 catch
 endtry
 

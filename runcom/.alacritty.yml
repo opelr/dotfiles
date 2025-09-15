@@ -2,7 +2,7 @@ live_config_reload: true
 
 font:
   normal:
-    family: Fira Code
+    family: "FiraCode Nerd Font"
     style: Regular
   size: 18.0
 
@@ -12,30 +12,30 @@ draw_bold_text_with_bright_colors: true
 colors:
   # Default colors
   primary:
-    background: "#2D2A2E"
-    foreground: "#FCFCFA"
+    background: "#2d2a2e"
+    foreground: "#fcfcfa"
 
   # Normal colors
   normal:
-    black: "#403E41"
-    red: "#FF6188"
-    green: "#A9DC76"
-    yellow: "#FFD866"
-    blue: "#FC9867"
-    magenta: "#AB9DF2"
-    cyan: "#78DCE8"
-    white: "#FCFCFA"
+    black: "#403e41"
+    red: "#ff6188"
+    green: "#a9dc76"
+    yellow: "#ffd866"
+    blue: "#fc9867"
+    magenta: "#ab9df2"
+    cyan: "#78dce8"
+    white: "#fcfcfa"
 
   # Bright colors
   bright:
     black: "#727072"
-    red: "#FF6188"
-    green: "#A9DC76"
-    yellow: "#FFD866"
-    blue: "#FC9867"
-    magenta: "#AB9DF2"
-    cyan: "#78DCE8"
-    white: "#FCFCFA"
+    red: "#ff6188"
+    green: "#a9dc76"
+    yellow: "#ffd866"
+    blue: "#fc9867"
+    magenta: "#ab9df2"
+    cyan: "#78dce8"
+    white: "#fcfcfa"
 
 window:
   padding:
@@ -43,6 +43,7 @@ window:
     y: 10
   dynamic_padding: true
   decorations: buttonless
+  option_as_alt: "Both"
 
 shell:
   program: /opt/homebrew/bin/tmux

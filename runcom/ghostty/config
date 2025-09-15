@@ -1,0 +1,8 @@
+font-family = "FiraCode Nerd Font Mono Bold"
+font-size = 18
+title = " "
+window-decoration = "none"
+window-padding-x = 10
+window-padding-y = 10
+cursor-style = "block"
+command = "/bin/zsh -c '/opt/homebrew/bin/tmux new-session -A -D -s main'"

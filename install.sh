@@ -35,11 +35,17 @@ ln -sfv "$DOTFILES_DIR/runcom/starship.toml" ~/.config
 mkdir -p ~/.config/nvim/
 ln -sfv "$DOTFILES_DIR/runcom/nvim/init.vim" ~/.config/nvim/init.vim
 
+mkdir -p ~/.config/nvim/colors/
+ln -sfv "$DOTFILES_DIR/runcom/nvim/colors/monokai_pro.vim" ~/.config/nvim/colors/monokai_pro.vim
+
 mkdir -p ~/.config/karabiner
 ln -sfv "$DOTFILES_DIR/karabiner/karabiner.json" ~/.config/karabiner
 
 mkdir -p ~/.config/helix
 ln -sfv "$DOTFILES_DIR/runcom/helix/config.toml" ~/.config/helix
+
+mkdir -p ~/.config/ghostty
+ln -sfv "$DOTFILES_DIR/runcom/ghostty/config" ~/.config/ghostty
 
 # OS X
 

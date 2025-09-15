@@ -1,3 +1,5 @@
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+#!/bin/bash
+# Install tools for zsh that aren't managed by brew
 
+# asdf
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf
