@@ -5,4 +5,5 @@ window-decoration = "none"
 window-padding-x = 10
 window-padding-y = 10
 cursor-style = "block"
+theme = "Monokai Pro"
 command = "/bin/zsh -c '/opt/homebrew/bin/tmux new-session -A -D -s main'"

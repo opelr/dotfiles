@@ -96,6 +96,7 @@ source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 eval "$(starship init zsh)"
 
 export PATH="/opt/homebrew/opt/mysql@8.0/bin:$PATH"
+export PATH="/Applications/Ghostty.app/Contents/MacOS:$PATH"
 
 timezsh() {
   shell=${1-$SHELL}

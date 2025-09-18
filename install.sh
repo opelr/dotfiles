@@ -24,6 +24,7 @@ ln -sfv "$DOTFILES_DIR/runcom/.vimrc" ~
 ln -sfv "$DOTFILES_DIR/runcom/.zshrc" ~
 ln -sfv "$DOTFILES_DIR/runcom/.zshrc_work" ~
 ln -sfv "$DOTFILES_DIR/runcom/.tmux.conf" ~
+ln -sfv "$DOTFILES_DIR/runcom/.tmux.conf.local" ~
 ln -sfv "$DOTFILES_DIR/runcom/.alacritty.yml" ~
 ln -sfv "$DOTFILES_DIR/runcom/.tool-versions" ~
 ln -sfv "$DOTFILES_DIR/git/.gitconfig" ~
